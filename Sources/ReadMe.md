@@ -98,5 +98,3 @@ struct ContentView: View {
             .amAlertReceiver()
     }
 }
-
-4. New Name
