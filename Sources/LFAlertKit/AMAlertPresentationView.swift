@@ -6,22 +6,18 @@
 //
 import SwiftUI
 
+/// Builds alert buttons based on provided actions.
 @MainActor
-@ViewBuilder public func vbAlertBottonPresentation(_ alertActions:[AMAlertActionModel]?) -> some View {
+@ViewBuilder
+internal func vbAlertBottonPresentation(_ alertActions: [AMAlertActionModel]?) -> some View {
     
     if let alertActions {
-        
-        ForEach(alertActions,id:\.label) { action in
-            
-            Button(role:action.role) {
-               // action.code()
+        ForEach(alertActions, id: \.label) { action in
+            Button(role: action.role) {
                 action.perform()
             } label: {
                 Text(action.label)
             }
-            
-            
         }
     }
-    
 }

@@ -7,7 +7,7 @@
 import SwiftUI
 
 public extension View {
-    
+    /// Enables global alert handling for the view.
     func amAlertReceiver() -> some View {
         
         modifier(AMAlertReceiverModifier())
